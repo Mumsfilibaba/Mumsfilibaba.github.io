@@ -42,7 +42,7 @@
 
   
   
-  <link rel="stylesheet" href="../css/coder.min.ed30115a76cdaa62f2229e973d5b1c89b2d3dd4b1d9c07a729baad06aa3b0cbe.css" integrity="sha256-7TARWnbNqmLyIp6XPVscibLT3UsdnAenKbqtBqo7DL4=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="../css/coder.min.37955902457c1f76a0371081cfcc3c2fb911b0701de8e60ab363aea6f4d2cf3a.css" integrity="sha256-N5VZAkV8H3agNxCBz8w8L7kRsHAd6OYKs2OupvTSzzo=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -52,7 +52,7 @@
   
     
     
-    <link rel="stylesheet" href="../css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="../css/coder-dark.min.b364e7ac0168817e93ca86785a983b4cf5a5e5e4697223c36c49d2e251c5180f.css" integrity="sha256-s2TnrAFogX6TyoZ4Wpg7TPWl5eRpciPDbEnS4lHFGA8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -76,10 +76,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
-  *{
+   
+  :root {
+    --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
+    --color-light-bg: #f3ede7;
+    --color-dark-bg: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+
+   
+  :where(*) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    line-height: 1.4;  
+    letter-spacing: 0.02rem;
+    min-height: 100vh;
+    position: relative;  
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;  
   }
 
   header {
@@ -87,54 +106,46 @@
     z-index: 1;
   }
 
-   
-  body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.2;  
-    letter-spacing: 0.02rem;  
-  }
-
   h3 {
-    font-size: 2.5rem;  
-    letter-spacing: 0.05rem;  
-    margin-bottom: 0.8rem;  
-    margin-top: 0.8rem;  
+    font-size: 2.5rem;
+    letter-spacing: 0.05rem;
+    margin: 0.8rem 0;  
   }
 
   .underline {
     text-decoration: underline;
   }
 
-  ul, li {
-    margin-left: 2rem;  
-    line-height: 1.4;  
-    letter-spacing: 0.04rem;  
+  ul {
+    padding-left: 4rem;  
+    line-height: 1.4;
+    letter-spacing: 0.04rem;
   }
 
-  strong {
-    font-weight: bold;
+  li {
+    padding-left: 2rem;  
+    line-height: 1.4;
+    letter-spacing: 0.04rem;
   }
 
   p {
-    margin: 0.8rem 0;  
-    line-height: 1.4;  
-    letter-spacing: 0.04rem;  
+    margin: 0.8rem 0;
+    line-height: 1.4;
+    letter-spacing: 0.04rem;
   }
 
   hr {
-    margin-top: 2rem;  
-    margin-bottom: 2rem;  
-    border: none;  
-    border-top: 1px solid #ddd;  
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #ddd;
   }
 
   .video-container {
     position: relative;
     padding-bottom: 56.25%;  
-    padding-top: 0px;
     height: 0;
-    overflow: hidden;  
-    border-radius: 5px;  
+    overflow: hidden;
+    border-radius: 5px;
   }
 
   .video-container iframe {
@@ -144,98 +155,67 @@
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 5px;  
+    border-radius: 5px;
   }
 
   .portfolio-image {
     position: relative;
-    width: 100%;  
-    max-width: 800px;  
-    aspect-ratio: 16 / 9;  
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
     border-radius: 5px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;  
+    margin: 0 auto;
+    object-fit: cover;
   }
 
   .profile-portrait {
-    position: relative;
-    width: 300px;
-    height: 300px;
+    width: 90%;
+    max-width: 260px;  
+    height: auto;  
     border-radius: 15px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
-   
   .reading-area {
     position: relative;
     padding: 2rem;
     max-width: 800px;
     margin: 2rem auto;
     z-index: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    transition: background 0.3s ease;
+    box-shadow: 0 0 10px var(--shadow-color);
+    background: inherit;  
   }
 
-   
-  body {
-    min-height: 100vh;
-    position: relative;  
-    background: linear-gradient(-45deg, #fcfbf8, #f3ede7);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    transition: background 0.3s ease;
-  }
-
-  body.colorscheme-light {
-    background: linear-gradient(-45deg, #fcfbf8, #f3ede7);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-
-  body.colorscheme-dark {
-    background: linear-gradient(-45deg, #333333, #444444);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-
-   
   body.colorscheme-light .reading-area {
-    background: linear-gradient(-45deg, #fcfbf8, #f3ede7);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background: var(--color-light-bg);
   }
 
   body.colorscheme-dark .reading-area {
-    background: linear-gradient(-45deg, #333333, #444444);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background: var(--color-dark-bg);
   }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-   
   .background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;  
-    z-index: -1;  
+    pointer-events: none;
+    z-index: -1;
+  }
+
+   
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 2rem;
+    }
+
+    .portfolio-image,
+    .profile-portrait {
+      max-width: 100%;
+    }
   }
 </style>
 
@@ -252,12 +232,11 @@
 
 </head>
 
+ 
 
 
-  
+<body class="preload-transitions colorscheme-dark">
 
-
-<body class="preload-transitions colorscheme-auto">
   
   <canvas class="background"></canvas>
 
@@ -348,7 +327,7 @@
 
   
     
-    <script src="../js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+    <script src="../js/coder.min.b2e53c65edf8f5419b88f36a19e2c9b603737d7319e8eb160b4d5d36cfc8d013.js" integrity="sha256-suU8Ze349UGbiPNqGeLJtgNzfXMZ6OsWC01dNs/I0BM="></script>
   
 
   
@@ -391,26 +370,31 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      Particles.init({
-        selector: ".background",
-        
-        color: ["#333333", "#666666", "#999999"],
-        opacity: 0.3,
-        connectParticles: true,
-        maxParticles: 120, 
-        responsive: [
-          {
-            breakpoint: 768,
-            options: {
-              
-              color: ["#555555", "#888888", "#CCCCCC"],
-              maxParticles: 60,  
-              connectParticles: false
+      try {
+        Particles.init({
+          selector: ".background",
+          
+          color: ["#333333", "#666666", "#999999"],
+          opacity: 0.1,
+          connectParticles: true,
+          maxParticles: 120, 
+          responsive: [
+            {
+              breakpoint: 768,
+              options: {
+                
+                color: ["#555555", "#888888", "#CCCCCC"],
+                maxParticles: 60,  
+                connectParticles: true
+              }
             }
-          }
-        ]
-      });
+          ]
+        });
+      } catch (error) {
+        console.error("Particles.js initialization failed:", error);
+      }
     });
   </script>
+
 </body>
 </html>

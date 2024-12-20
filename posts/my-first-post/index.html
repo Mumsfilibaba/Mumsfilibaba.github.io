@@ -15,26 +15,22 @@
 <meta name="author" content="Alexander Dahlin">
 <meta name="description" content="
   Introduction
-  
-    
-    Link to heading
-  
 
 This is bold text, and this is emphasized text.
 Visit the Hugo website!">
-<meta name="keywords" content="blog,developer,personal">
+<meta name="keywords" content="blog,developer,personal,portfolio,resume,posts">
 
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="My First Post">
-  <meta name="twitter:description" content="Introduction Link to heading This is bold text, and this is emphasized text.
+  <meta name="twitter:description" content="Introduction This is bold text, and this is emphasized text.
 Visit the Hugo website!">
 
-<meta property="og:url" content="http://localhost:1313/posts/my-first-post/">
+<meta property="og:url" content="//localhost:1313/posts/my-first-post/">
   <meta property="og:site_name" content="Alexander Dahlin">
   <meta property="og:title" content="My First Post">
-  <meta property="og:description" content="Introduction Link to heading This is bold text, and this is emphasized text.
+  <meta property="og:description" content="Introduction This is bold text, and this is emphasized text.
 Visit the Hugo website!">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -45,17 +41,17 @@ Visit the Hugo website!">
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/my-first-post/">
+<link rel="canonical" href="//localhost:1313/posts/my-first-post/">
 
 
-<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="../../css/coder.css" media="screen">
 
 
 
@@ -65,7 +61,7 @@ Visit the Hugo website!">
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="../../css/coder-dark.css" media="screen">
   
 
 
@@ -75,105 +71,161 @@ Visit the Hugo website!">
 
 
 
-<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/svg+xml" href="../../img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="../../img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../img/favicon-16x16.png" sizes="16x16">
 
-<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
 
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../images/safari-pinned-tab.svg" color="#5bbad5">
 
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-  
-    header {
-      position: relative;
-      z-index: 1;
+   
+  :root {
+    --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif;
+    --color-light-bg: #f3ede7;
+    --color-dark-bg: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+
+   
+  :where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    line-height: 1.4;  
+    letter-spacing: 0.02rem;
+    min-height: 100vh;
+    position: relative;  
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;  
+  }
+
+  header {
+    position: relative;
+    z-index: 1;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    letter-spacing: 0.05rem;
+    margin: 0.8rem 0;  
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  ul {
+    padding-left: 4rem;  
+    line-height: 1.4;
+    letter-spacing: 0.04rem;
+  }
+
+  li {
+    padding-left: 2rem;  
+    line-height: 1.4;
+    letter-spacing: 0.04rem;
+  }
+
+  p {
+    margin: 0.8rem 0;
+    line-height: 1.4;
+    letter-spacing: 0.04rem;
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;  
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 5px;
+  }
+
+  .portfolio-image {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .profile-portrait {
+    width: 90%;
+    max-width: 260px;  
+    height: auto;  
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .reading-area {
+    position: relative;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    z-index: 1;
+    box-shadow: 0 0 10px var(--shadow-color);
+    background: inherit;  
+  }
+
+  body.colorscheme-light .reading-area {
+    background: var(--color-light-bg);
+  }
+
+  body.colorscheme-dark .reading-area {
+    background: var(--color-dark-bg);
+  }
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+   
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 2rem;
     }
 
-    .circular-portrait {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
+    .portfolio-image,
+    .profile-portrait {
+      max-width: 100%;
     }
-
-     
-    .reading-area {
-      position: relative;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 2rem auto;
-      z-index: 1;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
-    }
-  
-     
-    body {
-      min-height: 100vh;
-      position: relative;  
-      background: linear-gradient(-45deg, #fcfbf8, #f3ede7);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      transition: background 0.3s ease;
-    }
-  
-    body.colorscheme-light {
-      background: linear-gradient(-45deg, #fcfbf8, #f3ede7);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-    }
-  
-    body.colorscheme-dark {
-      background: linear-gradient(-45deg, #333333, #444444);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-    }
-  
-     
-    body.colorscheme-light .reading-area {
-      background: linear-gradient(-45deg, #fcfbf8, #f3ede7);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-    }
-  
-    body.colorscheme-dark .reading-area {
-      background: linear-gradient(-45deg, #333333, #444444);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-    }
-  
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  
-     
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;  
-      z-index: -1;  
-    }
+  }
 </style>
 
 
@@ -188,12 +240,11 @@ Visit the Hugo website!">
 
 </head>
 
+ 
 
 
-  
+<body class="preload-transitions colorscheme-dark">
 
-
-<body class="preload-transitions colorscheme-auto">
   
   <canvas class="background"></canvas>
 
@@ -209,7 +260,7 @@ Visit the Hugo website!">
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="//localhost:1313/">
       Alexander Dahlin
     </a>
     
@@ -222,19 +273,19 @@ Visit the Hugo website!">
         
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/about/">About</a>
+              <a class="navigation-link " href="../../about/">About</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/projects/">Projects</a>
+              <a class="navigation-link " href="../../projects/">Projects</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/publications/">Publications</a>
+              <a class="navigation-link " href="../../publications/">Publications</a>
             </li>
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/resume/">Resume</a>
+              <a class="navigation-link " href="../../resume/">Resume</a>
             </li>
           
         
@@ -253,7 +304,7 @@ Visit the Hugo website!">
         <header>
           <div class="post-title">
             <h1 class="title">
-              <a class="title-link" href="http://localhost:1313/posts/my-first-post/">
+              <a class="title-link" href="//localhost:1313/posts/my-first-post/">
                 My First Post
               </a>
             </h1>
@@ -281,10 +332,6 @@ Visit the Hugo website!">
           
           <h2 id="introduction">
   Introduction
-  <a class="heading-link" href="#introduction">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
 </h2>
 <p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
 <p>Visit the <a href="https://gohugo.io"  class="external-link" target="_blank" rel="noopener">Hugo</a> website!</p>
@@ -313,14 +360,6 @@ Visit the Hugo website!">
 
     <footer class="footer">
   <section class="container">
-    ©
-    
-    2024
-     Alexander Dahlin 
-    ·
-    
-    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
   </section>
 </footer>
 
@@ -330,7 +369,7 @@ Visit the Hugo website!">
 
   
     
-    <script src="/js/coder.js"></script>
+    <script src="../../js/coder.js"></script>
   
 
   
@@ -373,26 +412,31 @@ Visit the Hugo website!">
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      Particles.init({
-        selector: ".background",
-        
-        color: ["#333333", "#666666", "#999999"],
-        opacity: 0.3,
-        connectParticles: true,
-        maxParticles: 120, 
-        responsive: [
-          {
-            breakpoint: 768,
-            options: {
-              
-              color: ["#555555", "#888888", "#CCCCCC"],
-              maxParticles: 60,  
-              connectParticles: false
+      try {
+        Particles.init({
+          selector: ".background",
+          
+          color: ["#333333", "#666666", "#999999"],
+          opacity: 0.1,
+          connectParticles: true,
+          maxParticles: 120, 
+          responsive: [
+            {
+              breakpoint: 768,
+              options: {
+                
+                color: ["#555555", "#888888", "#CCCCCC"],
+                maxParticles: 60,  
+                connectParticles: true
+              }
             }
-          }
-        ]
-      });
+          ]
+        });
+      } catch (error) {
+        console.error("Particles.js initialization failed:", error);
+      }
     });
   </script>
+
 </body>
 </html>
