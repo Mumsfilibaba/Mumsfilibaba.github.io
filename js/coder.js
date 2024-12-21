@@ -90,21 +90,6 @@ function setTheme(theme) {
     // Create and send event
     const event = new Event('themeChanged');
     document.dispatchEvent(event);
-
-    if (darkModeToggle) {
-        darkModeToggle.setAttribute("aria-pressed", theme === "dark");
-        darkModeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode");
-        
-        // Update the icon
-        const icon = darkModeToggle.querySelector('i');
-        if (theme === "dark") {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
-    }
 }
 
 function rememberTheme(theme) {

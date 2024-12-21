@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "custom.css",
+	"sourceRoot": "/Users/dahlle/dev/github/Portfolio-Site-Private",
+	"sources": [
+		"assets/scss/custom.scss"
+	],
+	"sourcesContent": [
+		"// Colors\n$bg-color: #f3ede7;\n$fg-color: #333333;\n$alt-bg-color: #e0e0e0;\n$alt-fg-color: #000;\n$darker-alt-bg-color: #ccc;\n$link-color: #1565c0;\n\n// Dark colors\n$bg-color-dark: #333333;\n$fg-color-dark: #f3ede7;\n$alt-bg-color-dark: #424242;\n$alt-fg-color-dark: #dadada;\n$lighter-alt-bg-color-dark: #4f4f4f;\n$link-color-dark: #42a5f5;"
+	],
+	"names": [],
+	"mappings": ""
+}
